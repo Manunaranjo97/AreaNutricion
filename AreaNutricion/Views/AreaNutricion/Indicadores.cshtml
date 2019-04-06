@@ -1,0 +1,36 @@
+﻿
+<br />
+<form id="AreaNutricion" name="Indicadores" method="post" action="/AreaNutricion/Indicadores">
+    <!---->
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <center>Indicadores</center>
+            </div>
+            <div class="card-body">
+                <div id="mensaje">@ViewBag.mensaje</div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Peso*@
+                        <div class="form-group">
+                            <label for="Peso">Peso</label>
+                            <input id="Peso"
+                                   name="Peso"
+                                   class="form-control"
+                                   placeholder=" Ingrese el peso en kilogramos"
+                                   maxlength="3"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Altura*@
+                        <div class="form-group">
+                            <label for="Altura">Altura</label>
+                            <input id="Altura"
+                                   name="Altura"
+                                   class="form-control"
+                                   placeholder=" Ingrese su altura en centimetros"
+                                   maxlength="3" />
+                        </div>
+                    </div>
+                </div>

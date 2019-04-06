@@ -1,0 +1,369 @@
+﻿<br />
+<form id="AreaNutricion" name="Locales" method="post" action="/AreaNutricion/Local">
+    <!---->
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <center>Locales</center> 
+            </div>
+            <div class="card-body">
+                <div id="mensaje">@ViewBag.mensaje</div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Primer Nombre*@
+                        <div class="form-group">
+                            <label for="primerNombre">Primer Nombre</label>
+                            <input id="primerNombre"
+                                   name="primerNombre"
+                                   class="form-control"
+                                   placeholder=" Ingrese el primer nombre"
+                                   maxlength="100"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Segundo Nombre*@
+                        <div class="form-group">
+                            <label for="segundoNombre">Segundo Nombre</label>
+                            <input id="segundoNombre"
+                                   name="segundoNombre"
+                                   class="form-control"
+                                   placeholder=" Ingrese el segundo nombre"
+                                   maxlength="100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Primer Apellido*@
+                        <div class="form-group">
+                            <label for="primerApellido">Primer Apellido</label>
+                            <input id="primerApellido"
+                                   name="primerApellido"
+                                   class="form-control"
+                                   placeholder=" Ingrese el primer apellido"
+                                   maxlength="100"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Segundo Apellido*@
+                        <div class="form-group">
+                            <label for="segundoApellido">Segundo Apellido</label>
+                            <input id="segundoApellido"
+                                   name="segundoApellido"
+                                   class="form-control"
+                                   placeholder=" Ingrese el segundo apellido"
+                                   maxlength="100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Tipo de documento*@
+                        <div class="form-group">
+                            <label for="tipoDocumento">Tipo de Documento</label>
+                            <select id="tipoDocumento" required class="form-control">
+                                <option>Cedula de ciudadania</option>
+                                <option>Tarjeta de identidad</option>
+                                <option>Registro civil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Número de documento*@
+                        <div class="form-group">
+                            <label for="numeroDocumento">Número de Documento</label>
+                            <input id="numeroDocumento"
+                                   name="numeroDocumento"
+                                   class="form-control numero"
+                                   placeholder=" Ingrese el número de Documento"
+                                   maxlength="12"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Edad*@
+                        <div class="form-group">
+                            <label for="Edad">Edad</label>
+                            <input id="Edad"
+                                   name="Edad"
+                                   class="form-control numero"
+                                   placeholder=" Ingrese la Edad"
+                                   maxlength="2"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Fecha de nacimiento*@
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                        <input id="fechaNacimiento"
+                               name="fechaNacimiento"
+                               class="form-control datepicker"
+                               placeholder=" Introduce la Fecha de Nacimiento"
+                               required
+                               readonly
+                               maxlength="10" />
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Sexo*@
+                        <div class="form-group">
+                            <label class="control-label">Sexo</label>
+                            <div class="form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" id="Femenino" name="sexo" />
+                                    Femenino
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="Masculino" name="sexo" />
+                                    Masculino
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Estado civil*@
+                        <div class="form-group">
+                            <label for="EstadoCivil">Estado Civil</label>
+                            <select id="EstadoCivil" required class="form-control">
+                                <option>Soltero</option>
+                                <option>Casado</option>
+                                <option>Union libre</option>
+                                <option>Divorciado</option>
+                                <option>Viudo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Dirección*@
+                        <div class="form-group">
+                            <label for="Direccion">Dirección</label>
+                            <input id="Direccion"
+                                   name="Direccion"
+                                   class="form-control"
+                                   placeholder=" Dirección"
+                                   maxlength="100"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Barrio*@
+                        <div class="form-group">
+                            <label for="Barrio">Barrio de residencia</label>
+                            <input id="Barrio"
+                                   name="Barrio"
+                                   class="form-control"
+                                   placeholder=" Barrio"
+                                   maxlength="100"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Ocupación*@
+                        <div class="form-group">
+                            <label for="Ocupacion">Ocupación</label>
+                            <input id="Ocupacion"
+                                   name="Ocupacion"
+                                   class="form-control"
+                                   placeholder=" Ocupación"
+                                   maxlength="100"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Nivel de escolaridad*@
+                        <div class="form-group">
+                            <label for="Escolaridad">Nivel de escolaridad</label>
+                            <select id="Escolaridad" required class="form-control">
+                                <option>Basica primaria</option>
+                                <option>Basica Secundaria</option>
+                                <option>Bachillerato</option>
+                                <option>Tecnico</option>
+                                <option>Tecnologo</option>
+                                <option>Profesional</option>
+                                <option>Maestria</option>
+                                <option>Doctorado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// EPS*@
+                        <div class="form-group">
+                            <label for="Eps">EPS</label>
+                            <select id="Eps" required class="form-control">
+                                <option>Suramericana</option>
+                                <option>Aliansalud</option>
+                                <option>Sanitas</option>
+                                <option>Compensar</option>
+                                <option>Salud Total</option>
+                                <option>Nueva Eps</option>
+                                <option>Coomeva</option>
+                                <option>Famisanar </option>
+                                <option>Salud Vida</option>
+                                <option>Cruz Blanca</option>
+                                <option>Cafesalud </option>
+                                <option>Comfacor </option>
+                                <option>Coosalud Eps </option>
+                                <option>Ecoopsos Ess</option>
+                                <option>Ambuq Ars</option>
+                                <option>Comparta</option>
+                                <option>Asociacion Mutual Ser Ess</option>
+                                <option>Savia Salud Eps </option>
+                                <option>Nueva Eps </option>
+                                <option>Comfaboy</option>
+                                <option>Asmet Salud </option>
+                                <option>Convida </option>
+                                <option>Capresoca E.P.S. </option>
+                                <option>Emdisalud E.S.S. </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Regimen*@
+                        <div class="form-group">
+                            <label for="Regimen">Regimen</label>
+                            <select id="Regimen" required class="form-control">
+                                <option>Subsidiado</option>
+                                <option>Contributivo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Número de hijos*@
+                        <div class="form-group">
+                            <label for="NumeroHijos">Número de Hijos</label>
+                            <input id="NumeroHijos"
+                                   name="NumeroHijos"
+                                   class="form-control numero"
+                                   placeholder=" Ingrese el número de Hijos"
+                                   maxlength="2"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Telefono de contacto*@
+                        <div class="form-group">
+                            <label for="TelefonoContacto">Telefono de Contacto</label>
+                            <input id="TelefonoContacto"
+                                   name="TelefonoContacto"
+                                   class="form-control numero"
+                                   placeholder=" Ingrese el telefono de contacto"
+                                   maxlength="12"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        @*// Email*@
+                        <div class="form-group">
+                            <label for="email">Correo electronico o Email</label>
+                            <input id="email"
+                                   name="email"
+                                   class="form-control"
+                                   placeholder=" Ingrese Correo electronico o Email"
+                                   maxlength="50"
+                                   required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        @*// Telefono de contacto de emergencia*@
+                        <div class="form-group">
+                            <label for="TelefonoEmergencia">Telefono de Contacto de Emergencia</label>
+                            <input id="TelefonoEmergencia"
+                                   name="TelefonoEmergencia"
+                                   class="form-control numero"
+                                   placeholder=" Ingrese el telefono de contacto en caso de emergencia"
+                                   maxlength="12"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        @*// Antecedentes Medicos*@
+                        <div class="form-group">
+                            <label for="Antecedentes">Antecedentes Medicos</label>
+                            <input id="Antecedentes"
+                                   name="Antecedentes"
+                                   class="form-control"
+                                   placeholder=" Ingrese Antecedentes Medicos"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="submit" value="Guardar"
+                               class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+            language: 'es',
+            autoclose: true
+        });
+
+        $('.numero').keyup(function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        mensaje = {};
+        mensaje.warning = function (texto) {
+            $('#mensaje').
+                html('<div class="alert alert-danger">' + '<a class="close" data-dismiss="alert">x</a><span>' + texto + '</span></div>');
+        };
+
+        function validarFechaNacimiento(fecha) {
+            if (fecha == "") return false;
+            var fechas = fecha.split("/");
+            var nuevaFecha = new Date(parseInt(fechas[2], 10), parseInt(fechas[1], 10) - 1, parseInt(fechas[0], 10));
+            if (nuevaFecha > new Date()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        $('#AreaNutricion').submit(function (event) {
+            if ($('#numeroDocumento').val().length < 6) {
+                mensaje.warning('El número de documento debe tener minimo 6 dígitos');
+                return false;
+            }
+            if (!validarFechaNacimiento($('#fechaNacimiento').val())) {
+                mensaje.warning('La fecha de nacimiento no es valida');
+                return false;
+            }
+
+            if (!$('#Femenino:checked').val() &&
+                !$('#Masculino:checked').val()) {
+                mensaje.warning('Debe seleccionar el sexo');
+                return false;
+            }
+
+        });
+
+    </script>
+
+</form>
